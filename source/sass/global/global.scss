@@ -1,0 +1,66 @@
+.page {
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+  scroll-behavior: smooth;
+}
+
+.page__body {
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  min-height: 100%;
+  margin: 0;
+  font-family: "PT Mono", "Monaco", monospace;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: 400;
+  color: $basic-black;
+  background-color: $basic-white;
+}
+
+.container {
+  max-width: 1152px;
+  padding: 0 10%;
+  margin: 0 auto;
+
+  @media (max-width: 1023px) {
+    padding: 0 25px;
+  }
+
+  @media (max-width: 767px) {
+    padding: 0 15px;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.invisible {
+  display: none;
+}
+
+.not-available {
+  @media (max-width: 1023px) {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,30 @@
+@mixin main-font {
+  font-family: "PT Mono", "Monaco", monospace;
+  font-weight: 400;
+}
+
+@mixin second-font-400 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 400;
+}
+
+@mixin second-font-700 {
+  font-family: "Roboto Condensed", "Arial", sans-serif;
+  font-weight: 700;
+}
+
+@mixin logo-font-500 {
+  font-family: "Roboto", "Arial", sans-serif;
+  font-weight: 500;
+}
+
+@mixin reset-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+@mixin display-flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
