@@ -1,0 +1,208 @@
+.promo {
+  min-height: 792px;
+
+    &--nojs {
+      background-image:
+        url("../img/promo-img_large.png"),
+        url("../img/triangle-img.svg");
+
+      @media (min-resolution: 2dppx) {
+        background-image:
+          url("../img/promo-img_large@2x.png"),
+          url("../img/triangle-img.svg");
+      }
+    }
+
+    .no-webp & {
+      background-image:
+        url("../img/promo-img_large.png"),
+        url("../img/triangle-img.svg");
+
+      @media (min-resolution: 2dppx) {
+        background-image:
+          url("../img/promo-img_large@2x.png"),
+          url("../img/triangle-img.svg");
+      }
+    }
+
+    .webp & {
+      background-image:
+        url("../img/promo-img_large.webp"),
+        url("../img/triangle-img.svg");
+
+      @media (min-resolution: 2dppx) {
+        background-image:
+          url("../img/promo-img_large@2x.webp"),
+          url("../img/triangle-img.svg");
+      }
+    }
+  background-position: right 14.5% top 63.5%, right top -69px;
+  background-size: auto, 1920px 950px;
+  background-repeat: no-repeat;
+
+  @media (max-width: $medium-width) {
+    min-height: 620px;
+
+    &--nojs {
+      background-image:
+        url("../img/promo-img_medium.png"),
+        url("../img/triangle-img.svg");
+
+      @media (min-resolution: 2dppx) {
+        background-image:
+          url("../img/promo-img_medium@2x.png"),
+          url("../img/triangle-img.svg");
+      }
+    }
+
+    .no-webp & {
+      background-image:
+        url("../img/promo-img_medium.png"),
+        url("../img/triangle-img.svg");
+
+      @media (min-resolution: 2dppx) {
+        background-image:
+          url("../img/promo-img_medium@2x.png"),
+          url("../img/triangle-img.svg");
+      }
+    }
+
+    .webp & {
+      background-image:
+        url("../img/promo-img_medium.webp"),
+        url("../img/triangle-img.svg");
+
+      @media (min-resolution: 2dppx) {
+        background-image:
+          url("../img/promo-img_medium@2x.webp"),
+          url("../img/triangle-img.svg");
+      }
+    }
+    background-position: right top 16%, right -372px top -207px;
+    background-size: auto, 1514px 715px;
+  }
+
+  @media (max-width: $small-width) {
+    min-height: 582px;
+
+    &--nojs {
+      background-image:
+        url("../img/promo-img_small.png"),
+        url("../img/triangle-img.svg");
+
+      @media (min-resolution: 2dppx) {
+        background-image:
+          url("../img/promo-img_small@2x.png"),
+          url("../img/triangle-img.svg");
+      }
+    }
+
+    .no-webp & {
+      background-image:
+        url("../img/promo-img_small.png"),
+        url("../img/triangle-img.svg");
+
+      @media (min-resolution: 2dppx) {
+        background-image:
+          url("../img/promo-img_small@2x.png"),
+          url("../img/triangle-img.svg");
+      }
+    }
+
+    .webp & {
+      background-image:
+        url("../img/promo-img_small.webp"),
+        url("../img/triangle-img.svg");
+
+      @media (min-resolution: 2dppx) {
+        background-image:
+          url("../img/promo-img_small@2x.webp"),
+          url("../img/triangle-img.svg");
+      }
+    }
+  background-position: top, right -372px top -207px;
+  background-size: auto, 1514px 715px;
+  }
+}
+
+.promo__content {
+  width: 55%;
+  min-height: 130px;
+  padding-top: 230px;
+
+  @media (max-width: $medium-width) {
+    width: 70%;
+    padding: 124px 0 0 62px;
+  }
+
+  @media (max-width: $small-width) {
+    width: 100%;
+    padding: 220px 0 0;
+  }
+}
+
+.promo h2 {
+  @include second-font-700;
+  margin: 0 0 30px;
+  font-size: 80px;
+  line-height: 94px;
+  letter-spacing: 0.07em; //Не соответствует: нужно разобраться!!!
+  text-transform: uppercase;
+  color: $basic-white;
+
+  @media (max-width: $medium-width) {
+    font-size: 60px;
+    line-height: 70px;
+    margin-bottom: 28px;
+  }
+
+  @media (max-width: $small-width) {
+    font-size: 40px;
+    line-height: 46px;
+  }
+}
+
+.promo p {
+  margin: 0 0 38px;
+  padding-left: 100px;
+  font-size: 22px;
+  line-height: 34px;
+  color: $basic-white;
+
+  @media (max-width: $medium-width) {
+    margin-bottom: 55px;
+    padding-left: 52px;
+    font-size: 18px;
+    line-height: 28px;
+  }
+
+  @media (max-width: $medium-width) {
+    margin-bottom: 35px;
+  }
+}
+
+.promo__button {
+  @media (max-width: $medium-width) {
+    margin-left: 50px;
+  }
+
+  @media (max-width: $small-width) {
+    margin-left: 0;
+  }
+}
+
+.promo__button-link {
+  &--shot {
+    display: none;
+  }
+
+  @media (max-width: $small-width) {
+    &--shot {
+      display: inline;
+    }
+
+    &--full {
+      display: none;
+    }
+  }
+}

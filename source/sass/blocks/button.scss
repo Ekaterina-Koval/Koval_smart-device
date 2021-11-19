@@ -1,0 +1,62 @@
+.button {
+  @include display-flex-wrap;
+  justify-content: center;
+  align-items: center;
+  height: min-content;
+  min-width: 180px;
+  min-height: 45px;
+  border-width: 1px;
+  border-style: solid;
+  box-sizing: border-box;
+  border-radius: 5px;
+
+
+
+  & a {
+    vertical-align: middle;
+
+    @include second-font-700;
+    font-size: 16px;
+    line-height: 16px;
+    line-height: 18px;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  &--white {
+    border-color: $basic-white;
+
+    & a {
+      color: $basic-white;
+    }
+  }
+
+  &--color {
+    border-color: $accent-main;
+
+    & a {
+      color: $accent-main;
+    }
+  }
+
+  &--accent {
+    width: min-content;
+    min-width: 407px;
+    min-height: 55px;
+    border-color: $accent-main;
+    background-color: $accent-main;
+
+    & a {
+      color: $basic-white;
+    }
+
+    @media (max-width: $medium-width) {
+      min-width: 379px;
+    }
+
+    @media (max-width: $small-width) {
+      min-width: 100%;
+    }
+  }
+}

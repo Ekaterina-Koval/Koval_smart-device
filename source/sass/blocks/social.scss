@@ -1,0 +1,4 @@
+.social ul {
+  @include reset-list;
+  @include display-flex-wrap;
+}

@@ -1,0 +1,24 @@
+.logo {
+  @include display-flex-wrap;
+  width: max-content;
+  padding: 0 5px;
+
+  @media (max-width: $medium-width) {
+  padding: 0;
+  }
+}
+
+.logo img {
+  vertical-align: middle;
+  margin-right: 8px;
+
+  @media (max-width: $medium-width) {
+    margin-right: 6px;
+  }
+}
+
+@media (max-width: $small-width) {
+  .logo__text--invisible {
+    display: none;
+  }
+}

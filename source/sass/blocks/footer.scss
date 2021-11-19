@@ -1,0 +1,41 @@
+.footer {
+  @include display-flex-wrap;
+  position: relative;
+}
+
+@media (min-width: $large-width-only) {
+  .footer__copyright {
+    order: 2;
+  }
+}
+
+.footer__logo {
+  position: absolute;
+}
+
+.footer__social {
+  width: 25%;
+}
+
+.footer__nav {
+  width: 50%;
+}
+
+.footer__contacts {
+  width: 25%;
+
+  @media (max-width: $medium-width) {
+    width: 50%;
+  }
+}
+
+.footer__copyright {
+  width: 50%;
+
+  @media (max-width: $medium-width) {
+    &--move {
+     margin-left: 25%;
+    }
+  }
+}
+

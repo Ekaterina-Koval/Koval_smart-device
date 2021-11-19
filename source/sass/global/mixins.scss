@@ -13,11 +13,6 @@
   font-weight: 700;
 }
 
-@mixin logo-font-500 {
-  font-family: "Roboto", "Arial", sans-serif;
-  font-weight: 500;
-}
-
 @mixin reset-list {
   margin: 0;
   padding: 0;

@@ -1,0 +1,88 @@
+.page-header {
+  min-height: 875px;
+  background-color: $basic-dark;
+
+    &--nojs {
+      background-image: url("../img/header-bg_large.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/header-bg_large@2x.png");
+      }
+    }
+
+    .no-webp & {
+      background-image: url("../img/header-bg_large.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/header-bg_large@2x.png");
+      }
+    }
+
+    .webp & {
+      background-image: url("../img/header-bg_large.webp");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/header-bg_large@2x.webp");
+      }
+    }
+  background-position: top;
+  background-size: cover, 100%;
+  background-repeat: no-repeat;
+
+  @media (max-width: $medium-width) {
+    min-height: 686px;
+
+    &--nojs {
+      background-image: url("../img/header-bg_medium.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/header-bg_medium@2x.png");
+      }
+    }
+
+    .no-webp & {
+      background-image: url("../img/header-bg_medium.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/header-bg_medium@2x.png");
+      }
+    }
+
+    .webp & {
+      background-image: url("../img/header-bg_medium.webp");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/header-bg_medium@2x.webp");
+      }
+    }
+  }
+
+  @media (max-width: $small-width) {
+    min-height: 648px;
+
+    &--nojs {
+      background-image: url("../img/header-bg_small.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/header-bg_small@2x.png");
+      }
+    }
+
+    .no-webp & {
+      background-image: url("../img/header-bg_small.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/header-bg_small@2x.png");
+      }
+    }
+
+    .webp & {
+      background-image: url("../img/header-bg_small.webp");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/header-bg_small@2x.webp");
+      }
+    }
+
+  }
+}

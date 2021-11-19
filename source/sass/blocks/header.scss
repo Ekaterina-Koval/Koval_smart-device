@@ -1,0 +1,10 @@
+.header {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: min-content;
+  padding-top: 36px;
+
+  @media (max-width: $medium-width) {
+    padding-top: 20px;
+  }
+}

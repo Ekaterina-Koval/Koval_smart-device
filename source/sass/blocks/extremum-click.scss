@@ -1,0 +1,7 @@
+.extremum-click {
+  display: none;
+
+  @media (max-width: $small-width) {
+    display: block;
+  }
+}
