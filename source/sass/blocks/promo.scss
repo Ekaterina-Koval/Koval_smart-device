@@ -78,7 +78,7 @@
           url("../img/triangle-img.svg");
       }
     }
-    background-position: right top 16%, right -372px top -207px;
+    background-position: right top 14%, right -372px top -214px;
     background-size: auto, 1514px 715px;
   }
 
@@ -132,7 +132,7 @@
 
   @media (max-width: $medium-width) {
     width: 70%;
-    padding: 124px 0 0 62px;
+    padding: 116px 0 0 62px;
   }
 
   @media (max-width: $small-width) {
@@ -143,6 +143,7 @@
 
 .promo h2 {
   @include second-font-700;
+  font-weight: 700;
   margin: 0 0 30px;
   font-size: 80px;
   line-height: 94px;
@@ -176,7 +177,7 @@
     line-height: 28px;
   }
 
-  @media (max-width: $medium-width) {
+  @media (max-width: $small-width) {
     margin-bottom: 35px;
   }
 }

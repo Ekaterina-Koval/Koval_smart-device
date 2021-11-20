@@ -1,0 +1,19 @@
+.about-us {
+  padding-bottom: 40px; //Удалить после ПП
+  min-height: 362px;
+  background: url("../img/about-img_large.png");
+  background-position: 20% 20px;
+  background-repeat: no-repeat;
+}
+
+.about-us__wrapper {
+  padding-left: 310px;
+}
+
+.about-us h2 {
+  margin: 0;
+
+  @include second-font-400;
+  font-size: 32px;
+  line-height: 45px;
+}

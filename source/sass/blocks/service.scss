@@ -1,0 +1,53 @@
+.service {
+  background-color: $basic-dark;
+}
+
+.service__wrapper {
+  padding: 93px
+}
+
+.service h2 {
+  margin: 0;
+
+  @include second-font-400;
+  font-size: 36px;
+  line-height: 51px;
+  color: $basic-white;
+}
+
+.service ul {
+  @include reset-list;
+  @include display-flex-wrap;
+  justify-content: center;
+
+  @media (max-width: $medium-width) {
+    flex-direction: column;
+  }
+}
+
+.service li {
+  position: relative;
+  width: 30%;
+  height: 620px;
+
+  &::before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 63px;
+      height: 63px;
+      right: 0;
+      bottom: 0;
+      background-color: $accent-main;
+      background-image: url("../img/icon-arrow.svg");
+      background-size: 16px 8px;
+      background-position: center;
+      background-repeat: no-repeat;
+  }
+
+  &:first-child {
+    background-image: url("../img/service-img1_large.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+  }
+}
