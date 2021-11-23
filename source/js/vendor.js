@@ -21,4 +21,3 @@ accordionToggle.forEach(function (item, i, accordionToggle) {
     activePanel = (activePanel === this) ? 0 : this;
   });
 });
-

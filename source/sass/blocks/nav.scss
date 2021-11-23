@@ -1,0 +1,23 @@
+.nav h2 {
+  margin: 0 0 30px;
+
+  @include second-font-400;
+  font-size: 15px;
+  line-height: 16px;
+  letter-spacing: 0.05em;
+  color: $basic-dark;
+}
+
+.nav ul {
+  @include reset-list;
+  column-count: 2;
+  column-gap: 50px;
+  width: 100%;
+}
+
+.nav li {
+  width: 100%;
+}
+
+
+

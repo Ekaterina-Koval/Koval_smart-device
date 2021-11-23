@@ -1,6 +1,17 @@
 .footer {
   @include display-flex-wrap;
   position: relative;
+  padding-top: 65px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 52px;
+    width: 100vw;
+    height: 1px;
+    background-color: $footer-dec;
+  }
 }
 
 @media (min-width: $large-width-only) {
@@ -14,15 +25,20 @@
 }
 
 .footer__social {
+  padding: 106px 0 54px;
   width: 25%;
 }
 
 .footer__nav {
   width: 50%;
+  box-sizing: border-box;
+  padding: 0 70px 54px;
 }
 
-.footer__contacts {
+.footer__office {
   width: 25%;
+  padding: 0 0 54px 20px;
+  box-sizing: border-box;
 
   @media (max-width: $medium-width) {
     width: 50%;
@@ -30,11 +46,28 @@
 }
 
 .footer__copyright {
-  width: 50%;
+  @include display-flex-wrap;
+  justify-content: space-between;
+  width: 57.5%;
+  font-size: 13px;
+  line-height: 24px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: $basic-dark;
+
+  &--move {
+    width: 32.5%;
+    margin-right: 10%;
+  }
 
   @media (max-width: $medium-width) {
     &--move {
-     margin-left: 25%;
+      margin-left: 25%;
     }
   }
+}
+
+.footer__copyright span {
+  @include display-flex-wrap;
+  align-content: center;
 }

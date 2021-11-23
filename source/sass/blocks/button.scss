@@ -11,14 +11,11 @@
   box-sizing: border-box;
   border-radius: 5px;
 
-
-
   & a {
     vertical-align: middle;
 
     @include second-font-700;
     font-size: 16px;
-    line-height: 16px;
     line-height: 18px;
     letter-spacing: 0.05em;
     text-decoration: none;

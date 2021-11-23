@@ -2,3 +2,7 @@
   @include reset-list;
   @include display-flex-wrap;
 }
+
+.social li:not(:last-child) {
+  margin-right: 17px;
+}

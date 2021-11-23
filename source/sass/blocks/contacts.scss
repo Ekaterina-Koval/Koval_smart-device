@@ -2,7 +2,7 @@
   @include display-flex-wrap;
   justify-content: flex-end;
   align-items: center;
-  height: min-content
+  height: min-content;
 }
 
 .contacts ul {
@@ -18,9 +18,7 @@
   align-content: center;
   min-width: min-content;
   min-height: 45px;
-  padding:  0 5% 0 3.5%;
-
-
+  padding: 0 5% 0 3.5%;
 
   @media (max-width: $medium-width) {
     padding: 0 0 0 36px;

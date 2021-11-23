@@ -1,3 +1,11 @@
+.accordion__toggle {
+  display: none;
+
+  @media (max-width: $small-width) {
+    display: block;
+  }
+}
+
 @media (max-width: $small-width) {
   .accordion__item {
     display: none;

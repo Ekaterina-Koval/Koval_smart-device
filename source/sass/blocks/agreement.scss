@@ -1,0 +1,36 @@
+.agreement__checkbox {
+  display: none;
+}
+
+.agreement__label {
+  position: relative;
+  box-sizing: border-box;
+  font-size: 14px;
+  line-height: 16px;
+  color: $basic-white-opacity08;
+}
+
+.agreement__checkbox + label {
+  &::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -35px;
+    top: 2px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid $basic-white;
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: -28px;
+    top: 6px;
+    width: 26px;
+    height: 26px;
+    background-image: url("../img/icon-checkbox.svg");
+    background-repeat: no-repeat;
+  }
+}

@@ -153,71 +153,78 @@
     </section>
     <section class="service container">
       <div class="service__wrapper">
-      <h2>
-        Service Device предлагает следующие товары и услуги
-      </h2>
-      <ul>
-        <li>
-          <a href=# aria-label="Подробнее о производстве печатных плат">
-            <h3>
-              Производство печатных плат
-            </h3>
-          </a>
-        </li>
-        <li>
-          <a href=# aria-label="Подробнее о монтаже печатных плат">
-            <h3>
-              Монтаж печатных плат
-            </h3>
-          </a>
-        </li>
-        <li>
-          <a href=# aria-label="Подробнее о комплектующих для светотехники">
-            <h3>
-              Комплектующие для светотехники
-            </h3>
-          </a>
-        </li>
-      </ul>
+        <h2>
+          Service Device предлагает следующие товары и услуги
+        </h2>
+        <ul>
+          <li>
+            <a class="service__link service__link--production service__link--nojs .webp .no-webp" href=#
+              aria-label="Подробнее о производстве печатных плат">
+              <h3>
+                Производство печатных плат
+              </h3>
+            </a>
+          </li>
+          <li>
+            <a class="service__link service__link--installation service__link--nojs .webp .no-webp" href=#
+              aria-label="Подробнее о монтаже печатных плат">
+              <h3>
+                Монтаж печатных плат
+              </h3>
+            </a>
+          </li>
+          <li>
+            <a class="service__link service__link--accessories service__link--nojs .webp .no-webp" href=#
+              aria-label="Подробнее о комплектующих для светотехники">
+              <h3>
+                Комплектующие для светотехники
+              </h3>
+            </a>
+          </li>
+        </ul>
       </div>
     </section>
-    <section class="feedback">
-      <h2 class="visually-hidden">Форма обратной связи</h2>
-      <form>
-        <fieldset>
-          <legend>
-            Остались вопросы? Задайте их нам!
-          </legend>
-          <p>
-            Мы проконсультируем Вас бесплатно
-          </p>
-          <ul>
-            <li>
-              <label class="visually-hidden" for="user-name">
-                Имя
-              </label>
-              <input type="text" name="username" placeholder="Имя" id="user-name" required />
-            </li>
-            <li>
-              <label class="visually-hidden" for="user-phone">
-                Телефон
-              </label>
-              <input type="tel" name="phone" placeholder="Телефон" id="user-phone" required />
-            </li>
-            <li>
-              <label class="visually-hidden" for="question">
-                Вопрос
-              </label>
-              <textarea name="question" placeholder="Ваш вопрос" autocomplete="off" id="question"></textarea>
-            </li>
-          </ul>
-        </fieldset>
-        <input type="submit" value="Задать вопрос">
-        <input class="form__agreement" type="checkbox" name="agreement" checked id="agreement" />
-        <label class="" for="agreement">
-          Я согласен на обработку персональных данных
-        </label>
-      </form>
+    <section class="feedback container">
+      <div class="feedback__wrapper">
+        <h2 class="visually-hidden">Форма обратной связи</h2>
+        <form class="feedback__form form-feedback">
+          <fieldset>
+            <legend>
+              Остались вопросы? Задайте их нам!
+            </legend>
+            <p>
+              Мы проконсультируем Вас бесплатно
+            </p>
+            <ul>
+              <li>
+                <label class="visually-hidden" for="user-name">
+                  Имя
+                </label>
+                <input type="text" name="username" placeholder="Имя" id="user-name" required />
+              </li>
+              <li>
+                <label class="visually-hidden" for="user-phone">
+                  Телефон
+                </label>
+                <input type="tel" name="phone" placeholder="Телефон" id="user-phone" required />
+              </li>
+              <li>
+                <label class="visually-hidden" for="question">
+                  Вопрос
+                </label>
+                <textarea name="question" placeholder="Ваш вопрос" autocomplete="off" id="question"></textarea>
+              </li>
+            </ul>
+          </fieldset>
+          <button class="form-feedback__button button button--white" type="submit">Задать вопроc</button>
+          <div class="form-feedback__agreement agreement">
+            <input class="agreement__checkbox" type="checkbox" name="agreement" checked id="agreement" required />
+            <label class="agreement__label" for="agreement">
+              Я согласен на обработку персональных данных
+            </label>
+          </div>
+        </form>
+      </div>
     </section>
   </main>
   <footer class="page-footer footer container">
@@ -311,7 +318,7 @@
       </button>
       <ul class="office__contacts office__contacts--nojs accordion__item panel-body">
         <li>
-          г. Мытищи, Олимпийский проспект, д.10
+          <a href=https://www.google.ru/maps/place/%D0%9E%D0%BB%D0%B8%D0%BC%D0%BF%D0%B8%D0%B9%D1%81%D0%BA%D0%B8%D0%B9+%D0%BF%D1%80-%D1%82.,+10,+%D0%9C%D1%8B%D1%82%D0%B8%D1%89%D0%B8,+%D0%9C%D0%BE%D1%81%D0%BA%D0%BE%D0%B2%D1%81%D0%BA%D0%B0%D1%8F+%D0%BE%D0%B1%D0%BB.,+141006/@55.9223192,37.7566652,17z/data=!3m1!4b1!4m5!3m4!1s0x46b53195838bffff:0x8be3a5db7970d6ce!8m2!3d55.9223162!4d37.7588539 aria-label="Посмотреть адрес в Google maps">г. Мытищи, Олимпийский проспект, д.10</a>
         </li>
         <li>
           <a href="tel:+74955894050">
@@ -330,7 +337,7 @@
         </li>
       </ul>
     </div>
-    <div class="footer__copyright copyright ">
+    <div class="footer__copyright copyright">
       <span class="copyright__terms">
         Условия конфиденциальности
       </span>
@@ -340,7 +347,7 @@
     </div>
   </footer>
 
-  <section class="modal modal-callback visually-hidden">
+  <section class="popup popup-callback visually-hidden">
     <h2 class="feedback-title">Закажите звонок</h2>
     <form class="form" method="post" action="https://echo.htmlacademy.ru/">
       <fieldset>
@@ -351,7 +358,7 @@
             <label class="visually-hidden" for="user-name">
               Имя
             </label>
-            <input type="text" name="username" placeholder="Имя" id="user-name" required />
+            <input class="popup__username" type="text" name="username" placeholder="Имя" id="user-name" required />
           </li>
           <li>
             <label class="visually-hidden" for="user-phone">
@@ -373,7 +380,7 @@
         Я согласен на обработку персональных данных
       </label>
     </form>
-    <button class="modal__close" type="button">
+    <button class="popup__close" type="button">
       <span class="visually-hidden">
         Закрыть
       </span>

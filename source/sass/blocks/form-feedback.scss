@@ -1,0 +1,92 @@
+.form-feedback {
+  @include display-flex-wrap;
+  justify-content: space-between;
+  max-width: 570px;
+}
+
+.form-feedback fieldset {
+  padding: 0;
+  color: $basic-white;
+  border: none;
+}
+
+.form-feedback legend {
+  @include second-font-400;
+  margin-bottom: 10px;
+  font-size: 36px;
+  line-height: 51px;
+}
+
+.form-feedback p {
+  margin: 0 0 50px;
+}
+
+.form-feedback ul {
+  @include reset-list;
+  @include display-flex-wrap;
+}
+
+.form-feedback li {
+  width: 43%;
+  min-height: 50px;
+  margin-bottom: 40px;
+
+  &:not(:nth-child(2n+2)) {
+    margin-right: 10%;
+  }
+
+  &:last-child {
+    width: 100%;
+    margin-right: 0;
+  }
+}
+
+.form-feedback input {
+  width: 100%;
+  min-height: 50px;
+  padding: 0 0 0 14px;
+
+  @include main-font;
+  font-size: 16px;
+  line-height: 22px;
+  color: $basic-white;
+  background-color: $basic-white-opacity01;
+  border: 1px solid $basic-white-opacity01;
+
+  &::placeholder {
+    @include main-font;
+    font-size: 16px;
+    line-height: 22px;
+    color: $basic-white;
+  }
+}
+
+.form-feedback textarea {
+  min-width: 570px;
+  min-height: 154px;
+  padding: 10px 14px;
+  box-sizing: border-box;
+
+  @include main-font;
+  font-size: 16px;
+  line-height: 22px;
+  color: $basic-white;
+  background-color: $basic-white-opacity01;
+  border: 1px solid $basic-white-opacity01;
+  resize: none;
+
+  &::placeholder {
+    @include main-font;
+    font-size: 16px;
+    line-height: 22px;
+    color: $basic-white;
+  }
+}
+
+.form-feedback__button {
+  width: 48%;
+}
+
+.form-feedback__agreement {
+  width: 40%;
+}

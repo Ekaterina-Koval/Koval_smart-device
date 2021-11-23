@@ -1,47 +1,47 @@
 .promo {
-  min-height: 792px;
+  min-height: 790px;
 
-    &--nojs {
+  &--nojs {
+    background-image:
+      url("../img/promo-img_large.png"),
+      url("../img/triangle-img.svg");
+
+    @media (min-resolution: 2dppx) {
       background-image:
-        url("../img/promo-img_large.png"),
+        url("../img/promo-img_large@2x.png"),
         url("../img/triangle-img.svg");
-
-      @media (min-resolution: 2dppx) {
-        background-image:
-          url("../img/promo-img_large@2x.png"),
-          url("../img/triangle-img.svg");
-      }
     }
+  }
 
-    .no-webp & {
+  .no-webp & {
+    background-image:
+      url("../img/promo-img_large.png"),
+      url("../img/triangle-img.svg");
+
+    @media (min-resolution: 2dppx) {
       background-image:
-        url("../img/promo-img_large.png"),
+        url("../img/promo-img_large@2x.png"),
         url("../img/triangle-img.svg");
-
-      @media (min-resolution: 2dppx) {
-        background-image:
-          url("../img/promo-img_large@2x.png"),
-          url("../img/triangle-img.svg");
-      }
     }
+  }
 
-    .webp & {
+  .webp & {
+    background-image:
+      url("../img/promo-img_large.webp"),
+      url("../img/triangle-img.svg");
+
+    @media (min-resolution: 2dppx) {
       background-image:
-        url("../img/promo-img_large.webp"),
+        url("../img/promo-img_large@2x.webp"),
         url("../img/triangle-img.svg");
-
-      @media (min-resolution: 2dppx) {
-        background-image:
-          url("../img/promo-img_large@2x.webp"),
-          url("../img/triangle-img.svg");
-      }
     }
-  background-position: right 14.5% top 63.5%, right top -69px;
-  background-size: auto, 1920px 950px;
+  }
+  background-position: right 14.5% top 61.8%, 20% -29px;
+  background-size: auto, 1950px 820px;
   background-repeat: no-repeat;
 
   @media (max-width: $medium-width) {
-    min-height: 620px;
+    min-height: 614px;
 
     &--nojs {
       background-image:
@@ -120,15 +120,15 @@
           url("../img/triangle-img.svg");
       }
     }
-  background-position: top, right -372px top -207px;
-  background-size: auto, 1514px 715px;
+    background-position: top, right -372px top -207px;
+    background-size: auto, 1514px 715px;
   }
 }
 
 .promo__content {
   width: 55%;
   min-height: 130px;
-  padding-top: 230px;
+  padding-top: 226px;
 
   @media (max-width: $medium-width) {
     width: 70%;
@@ -147,7 +147,7 @@
   margin: 0 0 30px;
   font-size: 80px;
   line-height: 94px;
-  letter-spacing: 0.07em; //Не соответствует: нужно разобраться!!!
+  letter-spacing: 0.07em;
   text-transform: uppercase;
   color: $basic-white;
 
@@ -164,17 +164,33 @@
 }
 
 .promo p {
-  margin: 0 0 38px;
-  padding-left: 100px;
+  position: relative;
+  margin: 0 0 42px;
+  padding-left: 98px;
   font-size: 22px;
   line-height: 34px;
   color: $basic-white;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 66px;
+    height: 2px;
+    top: 15px;
+    left: 3px;
+    background-color: $basic-white;
+  }
 
   @media (max-width: $medium-width) {
     margin-bottom: 55px;
     padding-left: 52px;
     font-size: 18px;
     line-height: 28px;
+
+    &::before {
+      width: 33px;
+    }
   }
 
   @media (max-width: $small-width) {
@@ -183,6 +199,8 @@
 }
 
 .promo__button {
+  margin-left: 98px;
+
   @media (max-width: $medium-width) {
     margin-left: 50px;
   }

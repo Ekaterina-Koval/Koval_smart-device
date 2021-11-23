@@ -2,35 +2,35 @@
   min-height: 875px;
   background-color: $basic-dark;
 
-    &--nojs {
-      background-image: url("../img/header-bg_large.png");
+  &--nojs {
+    background-image: url("../img/header-bg_large.png");
 
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/header-bg_large@2x.png");
-      }
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/header-bg_large@2x.png");
     }
+  }
 
-    .no-webp & {
-      background-image: url("../img/header-bg_large.png");
+  .no-webp & {
+    background-image: url("../img/header-bg_large.png");
 
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/header-bg_large@2x.png");
-      }
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/header-bg_large@2x.png");
     }
+  }
 
-    .webp & {
-      background-image: url("../img/header-bg_large.webp");
+  .webp & {
+    background-image: url("../img/header-bg_large.webp");
 
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/header-bg_large@2x.webp");
-      }
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/header-bg_large@2x.webp");
     }
+  }
   background-position: top;
   background-size: cover, 100%;
   background-repeat: no-repeat;
 
   @media (max-width: $medium-width) {
-    min-height: 686px;
+    min-height: 680px;
 
     &--nojs {
       background-image: url("../img/header-bg_medium.png");
@@ -83,6 +83,5 @@
         background-image: url("../img/header-bg_small@2x.webp");
       }
     }
-
   }
 }

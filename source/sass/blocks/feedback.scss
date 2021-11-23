@@ -1,0 +1,15 @@
+.feedback {
+  @include display-flex-wrap;
+  justify-content: flex-end;
+  background-color: $accent-main;
+  background-image:
+    url("../img/feedback-img-bg.png"),
+    url("../img/feedback-bg.svg");
+  background-size: auto, 2065px 764px;
+  background-position: left 25% top 160px, left 50% top -60px;
+  background-repeat: no-repeat;
+}
+
+.feedback__wrapper {
+  padding: 90px 8.5% 110px;
+}
