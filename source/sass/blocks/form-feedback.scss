@@ -2,9 +2,14 @@
   @include display-flex-wrap;
   justify-content: space-between;
   max-width: 570px;
+
+  @media (max-width: $medium-width) {
+  max-width: 100%;
+  }
 }
 
 .form-feedback fieldset {
+  margin: 0;
   padding: 0;
   color: $basic-white;
   border: none;
@@ -12,13 +17,19 @@
 
 .form-feedback legend {
   @include second-font-400;
-  margin-bottom: 10px;
+  margin: 0 0 10px -6px;
   font-size: 36px;
   line-height: 51px;
+
+  @media (max-width: $medium-width) {
+    margin-bottom: 18px;
+    font-size: 32px;
+    line-height: 45px;
+  }
 }
 
 .form-feedback p {
-  margin: 0 0 50px;
+  margin: 0 0 52px;
 }
 
 .form-feedback ul {
@@ -27,12 +38,16 @@
 }
 
 .form-feedback li {
-  width: 43%;
+  width: 48%;
   min-height: 50px;
-  margin-bottom: 40px;
+  margin-bottom: 39px;
+
+  @media (max-width: $medium-width) {
+    margin-bottom: 44px;
+  }
 
   &:not(:nth-child(2n+2)) {
-    margin-right: 10%;
+    margin-right: 4%;
   }
 
   &:last-child {
@@ -44,14 +59,15 @@
 .form-feedback input {
   width: 100%;
   min-height: 50px;
-  padding: 0 0 0 14px;
+  padding: 0 0 0 16px;
+  box-sizing: border-box;
 
   @include main-font;
   font-size: 16px;
   line-height: 22px;
   color: $basic-white;
   background-color: $basic-white-opacity01;
-  border: 1px solid $basic-white-opacity01;
+  border: 1px solid transparent;
 
   &::placeholder {
     @include main-font;
@@ -62,9 +78,9 @@
 }
 
 .form-feedback textarea {
-  min-width: 570px;
+  width: 100%;
   min-height: 154px;
-  padding: 10px 14px;
+  padding: 10px 16px;
   box-sizing: border-box;
 
   @include main-font;
@@ -72,8 +88,12 @@
   line-height: 22px;
   color: $basic-white;
   background-color: $basic-white-opacity01;
-  border: 1px solid $basic-white-opacity01;
+  border: 1px solid transparent;
   resize: none;
+
+  @media (max-width: $medium-width) {
+    width: 100%;
+  }
 
   &::placeholder {
     @include main-font;

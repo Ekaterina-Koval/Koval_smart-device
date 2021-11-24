@@ -1,0 +1,16 @@
+.page-main__bg {
+  background-image: url("../img/main-bg_large.svg");
+  background-size: auto;
+  background-position: left 50% top -30px;
+  background-repeat: no-repeat;
+
+  @media (max-width: $medium-width) {
+    background-image: url("../img/main-bg_medium.svg");
+    background-size: auto;
+    background-position: right top 90px;
+  }
+
+  @media (max-width: $small-width) {
+    background-image: url("../img/small-bg_small.svg");
+  }
+}

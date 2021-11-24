@@ -1,14 +1,3 @@
-.office h2 {
-  margin: 0 0 30px;
-
-  @include second-font-400;
-  font-size: 15px;
-  line-height: 16px;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: $basic-dark;
-}
-
 .office ul {
   @include reset-list;
 }
@@ -17,5 +6,5 @@
   font-size: 15px;
   line-height: 25px;
   text-decoration: none;
-  color: $basic-dark;
+  color: $basic-dark-opacity-05;
 }

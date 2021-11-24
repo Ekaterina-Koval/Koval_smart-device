@@ -4,6 +4,10 @@
 
 .service__wrapper {
   padding: 90px 8.5% 127px;
+
+  @media (max-width: $medium-width) {
+    padding: 50px 0 30px;
+  }
 }
 
 .service h2 {
@@ -13,6 +17,11 @@
   font-size: 36px;
   line-height: 51px;
   color: $basic-white;
+
+  @media (max-width: $medium-width) {
+    font-size: 32px;
+    line-height: 45px;
+  }
 }
 
 .service ul {
@@ -48,6 +57,12 @@
     background-position: center;
     background-repeat: no-repeat;
   }
+
+  @media (max-width: $medium-width) {
+    width: 100%;
+    height: 256px;
+    margin-bottom: 46px;
+  }
 }
 
 .service__link {
@@ -58,6 +73,10 @@
   padding: 50px 10px 50px 50px;
   background-color: $basic-dark;
   text-decoration: none;
+
+  @media (max-width: $medium-width) {
+    padding: 40px 43px;
+  }
 
   &--production {
     .service__link--nojs & {
@@ -308,4 +327,8 @@
   font-size: 20px;
   line-height: 30px;
   color: $basic-white;
+
+  @media (max-width: $medium-width) {
+    width: 25%;
+  }
 }

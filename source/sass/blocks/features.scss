@@ -1,19 +1,6 @@
 .features {
   position: relative;
-
-  &::before {
-    content: "";
-    width: 100vw;
-    height: 1346px;
-    object-fit: cover;
-    position: absolute;
-    top: -28px;
-    left: -8.5%;
-    z-index: -1;
-    background-image: url("../img/features-bg.svg");
-    background-size: 2242px 1346px;
-    background-repeat: no-repeat;
-  }
+  height: min-content;
 }
 
 .features__wrapper {
@@ -65,7 +52,8 @@
   cursor: pointer;
 
   @media (max-width: $medium-width) {
-    padding: 25px 20px 10px 25px;
+    min-height: 232px;
+    padding: 25px 20px 19px 25px;
   }
 
   & svg {
