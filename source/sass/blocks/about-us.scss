@@ -1,6 +1,6 @@
 .about-us {
   min-height: 412px;
-  background: url("../img/about-img_large.png");
+  background-image: url("../img/about-img_large.png");
   background-position: 20.3% top;
   background-repeat: no-repeat;
 
@@ -9,6 +9,10 @@
     background-position: left -2% top;
     background-size: 251px 361px;
   }
+
+  @media (max-width: $small-width) {
+    background-image: none;
+  }
 }
 
 .about-us__wrapper {
@@ -16,6 +20,10 @@
 
   @media (max-width: $medium-width) {
     padding: 0 0 0 26%;
+  }
+
+  @media (max-width: $small-width) {
+    padding: 6px 0 62px;
   }
 }
 
@@ -29,11 +37,19 @@
 
   @media (max-width: $medium-width) {
     position: relative;
-    margin: 23px 0;
     overflow: hidden;
     display: -webkit-box;
     -webkit-line-clamp: 4;
     -webkit-box-orient: vertical;
+  }
+
+  @media (max-width: $small-width) {
+    -webkit-line-clamp: 8;
+    margin-bottom: 40px;
+
+    &:last-of-type {
+      margin-bottom: 30px;
+    }
   }
 }
 
@@ -46,5 +62,11 @@
 
   @media (max-width: $medium-width) {
     margin-bottom: 26px;
+  }
+
+  @media (max-width: $small-width) {
+    margin-bottom: 20px;
+    font-size: 28px;
+    line-height: 40px;
   }
 }

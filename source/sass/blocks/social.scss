@@ -1,6 +1,10 @@
 .social ul {
   @include reset-list;
   @include display-flex-wrap;
+
+  @media (max-width: $small-width) {
+      justify-content: center;
+  }
 }
 
 .social li:not(:last-child) {

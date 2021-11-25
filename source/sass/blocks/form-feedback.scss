@@ -16,20 +16,11 @@
 }
 
 .form-feedback legend {
-  @include second-font-400;
-  margin: 0 0 10px -6px;
-  font-size: 36px;
-  line-height: 51px;
-
-  @media (max-width: $medium-width) {
-    margin-bottom: 18px;
-    font-size: 32px;
-    line-height: 45px;
-  }
-}
-
-.form-feedback p {
   margin: 0 0 52px;
+
+  @media (max-width: $small-width) {
+    margin-bottom: 24px;
+  }
 }
 
 .form-feedback ul {
@@ -46,6 +37,11 @@
     margin-bottom: 44px;
   }
 
+  @media (max-width: $small-width) {
+    width: 100%;
+    margin-bottom: 32px;
+  }
+
   &:not(:nth-child(2n+2)) {
     margin-right: 4%;
   }
@@ -53,6 +49,10 @@
   &:last-child {
     width: 100%;
     margin-right: 0;
+
+    @media (max-width: $small-width) {
+      margin-bottom: 26px;
+    }
   }
 }
 
@@ -95,6 +95,10 @@
     width: 100%;
   }
 
+  @media (max-width: $small-width) {
+    min-height: 104px;
+  }
+
   &::placeholder {
     @include main-font;
     font-size: 16px;
@@ -105,8 +109,18 @@
 
 .form-feedback__button {
   width: 48%;
+
+  @media (max-width: $small-width) {
+    width: 100%;
+    margin-bottom: 26px;
+  }
 }
 
 .form-feedback__agreement {
   width: 40%;
+
+  @media (max-width: $small-width) {
+    width: 100%;
+    padding-left: 34px;
+  }
 }

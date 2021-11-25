@@ -5,12 +5,10 @@
   background-repeat: no-repeat;
 
   @media (max-width: $medium-width) {
-    background-image: url("../img/main-bg_medium.svg");
-    background-size: auto;
-    background-position: right top 90px;
+    background-position: left 30% top -84px;
   }
 
   @media (max-width: $small-width) {
-    background-image: url("../img/small-bg_small.svg");
+    background-position: right 5.5% bottom -84%;
   }
 }

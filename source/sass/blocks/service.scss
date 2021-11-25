@@ -22,6 +22,13 @@
     font-size: 32px;
     line-height: 45px;
   }
+
+  @media (max-width: $small-width) {
+    font-size: 28px;
+    line-height: 40px;
+    margin-left: 10px;
+    margin-bottom: 40px;
+  }
 }
 
 .service ul {
@@ -63,6 +70,10 @@
     height: 256px;
     margin-bottom: 46px;
   }
+
+  @media (max-width: $small-width) {
+    margin-bottom: 30px;
+  }
 }
 
 .service__link {
@@ -76,6 +87,10 @@
 
   @media (max-width: $medium-width) {
     padding: 40px 43px;
+  }
+
+  @media (max-width: $small-width) {
+    padding: 20px 34px;
   }
 
   &--production {
@@ -330,5 +345,9 @@
 
   @media (max-width: $medium-width) {
     width: 25%;
+  }
+
+  @media (max-width: $small-width) {
+    width: 70%;
   }
 }

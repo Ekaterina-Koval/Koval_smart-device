@@ -10,6 +10,10 @@
   @include display-flex-wrap;
   justify-content: flex-end;
   flex-grow: 1;
+
+  @media (max-width: $small-width) {
+    padding-top: 4px;
+  }
 }
 
 .contacts li {
@@ -21,7 +25,12 @@
   padding: 0 5% 0 3.5%;
 
   @media (max-width: $medium-width) {
-    padding: 0 0 0 36px;
+    padding: 0 0 0 7%;
+  }
+
+  @media (max-width: $small-width) {
+    align-content: flex-start;
+    padding-left: 11%;
   }
 }
 

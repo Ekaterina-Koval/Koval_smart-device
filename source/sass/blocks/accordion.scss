@@ -3,6 +3,14 @@
 
   @media (max-width: $small-width) {
     display: block;
+    width: 16px;
+    height: 16px;
+
+    &--open {
+      background-image: url("../img/icon-accordion_open.svg");
+      background-size: auto;
+      background-repeat: no-repeat;
+    }
   }
 }
 

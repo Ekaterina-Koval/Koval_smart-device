@@ -23,4 +23,28 @@
   @media (max-width: $medium-width) {
     padding: 80px 8.5% 105px 9%;
   }
+
+  @media (max-width: $small-width) {
+    padding: 32px 0 35px;
+  }
+}
+
+.feedback h2 {
+  @include second-font-400;
+  margin: 0 0 10px -6px;
+  font-size: 36px;
+  line-height: 51px;
+  color: $basic-white;
+
+  @media (max-width: $medium-width) {
+    margin-bottom: 18px;
+    font-size: 32px;
+    line-height: 45px;
+  }
+
+  @media (max-width: $small-width) {
+    margin: 0 0 14px;
+    font-size: 28px;
+    line-height: 40px;
+  }
 }

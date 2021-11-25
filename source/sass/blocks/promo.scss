@@ -83,7 +83,7 @@
   }
 
   @media (max-width: $small-width) {
-    min-height: 582px;
+    min-height: 576px;
 
     &--nojs {
       background-image:
@@ -120,8 +120,8 @@
           url("../img/triangle-img.svg");
       }
     }
-    background-position: top, right -372px top -207px;
-    background-size: auto, 1514px 715px;
+    background-position: top 20px right, right -502px top -290px;
+    background-size: auto, 1446px 834px;
   }
 }
 
@@ -137,7 +137,7 @@
 
   @media (max-width: $small-width) {
     width: 100%;
-    padding: 220px 0 0;
+    padding: 214px 0 0;
   }
 }
 
@@ -194,7 +194,9 @@
   }
 
   @media (max-width: $small-width) {
-    margin-bottom: 35px;
+    margin-bottom: 40px;
+    font-size: 16px;
+    line-height: 25px;
   }
 }
 
