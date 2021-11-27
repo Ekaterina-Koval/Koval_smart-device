@@ -8,21 +8,21 @@ const promo = body.querySelector('.promo');
 const form = body.querySelector('.form');
 const userName = document.querySelector('#user-name');
 const userPhone = document.querySelector('#user-phone');
+// const userText = document.querySelector('#user-text');
 const popupOpen = document.querySelector('.contacts__callback-button');
-const popup = document.querySelector('.popup');
-const popupClose = popup.querySelector('.popup__close');
+const popupTemplate = body.querySelector('.feedback__wrapper');
+
 // const popupUserName = popup.querySelector('.popup__username');
 
 header.classList.remove('page-header--nojs');
-promo.classList.remove('promo--nojs');
-
+promo.classList.remove('promo--nojs'); // loading *.webp
 
 let isStorageSupport = true;
 let storageName = '';
-let storageTel = '';
+let storagePhone = '';
 try {
-  storageName = localStorage.getItem('username');
-  storageTel = localStorage.getItem('email');
+  storageName = localStorage.getItem('user-name');
+  storagePhone = localStorage.getItem('user-phone');
 } catch (err) {
   isStorageSupport = false;
 }
@@ -30,75 +30,26 @@ try {
 if (storageName) {
   userName.value = storageName;
 }
-if (storageTel) {
-  userPhone.value = storageTel;
+if (storagePhone) {
+  userPhone.value = storagePhone;
 }
 
 if (form) {
   form.addEventListener('submit', () => {
     if (isStorageSupport) {
       if (userPhone.value) {
-        localStorage.setItem('tel', userPhone.value);
+        localStorage.setItem('user-phone', userPhone.value);
       }
       if (userName.value) {
-        localStorage.setItem('name', userName.value);
+        localStorage.setItem('user-name', userName.value);
       }
     }
   });
 }
 
-const showPopup = (evt) => {
-  evt.preventDefault();
-  popup.classList.remove('visually-hidden');
-  // popupUserName.focus();
-};
-
-const closePopup = (evt) => {
-  evt.preventDefault();
-  popup.classList.add('visually-hidden');
-  popupClose.removeEventListener('click', closePopup);
-};
-
-const escClose = (evt) => {
-  if (evt.keyCode === ESC_KEYCODE) {
-    if (!popup.classList.contains('vishually-hidden')) {
-      evt.preventDefault();
-      popup.classList.add('visually-hidden');
-      document.removeEventListener('keydown', escClose);
-    }
-  }
-};
-/*
-const clickClose = () => {
-  popup.classList.add('visually-hidden');
-  document.removeEventListener('click', clickClose);
-};
-*/
-popupClose.addEventListener('click', closePopup);
-document.addEventListener('keydown', escClose);
-// document.addEventListener('click', clickClose);
-popupOpen.addEventListener('click', showPopup);
-
-/*
-
-
-feedbackForm.addEventListener('submit', function (event) {
-  if (!userName.value || !eMail.value || !feedbackText.value) {
-    event.preventDefault();
-    modal.classList.remove('modal-error');
-    modal.offsetWidth = modal.offsetWidth;
-    modal.classList.add('modal-error');
-  } else {
-    if (isStorageSupport) {
-      localStorage.setItem('username', userName.value);
-      localStorage.setItem('email', eMail.value);
-    }
-  }
-});
-
 userPhone.addEventListener('input', () => {
   const userPhoneValue = userPhone.value;
-  let regex = /^\+?[\d()\- ]+$/;
+  let regex = /\+7\(\d{3}\)\d{3}-\d{2}-\d{2}/;
   if (!userPhoneValue) {
     userPhone.setCustomValidity('Обязательное поле!');
   } else if (!regex.test(userPhoneValue)) {
@@ -109,4 +60,49 @@ userPhone.addEventListener('input', () => {
   userPhone.reportValidity();
 });
 
-*/
+const showPopup = () => {
+  const popup = document.createElement('section');
+  const popupCloseBtn = document.createElement('button');
+  const popupWrapper = popupTemplate.cloneNode(true);
+  popup.className = 'popup';
+  popupCloseBtn.className = 'popup__close-btn';
+
+  popupWrapper.getElementsByTagName('h2')[0].textContent = 'Закажите звонок';
+  popupWrapper.getElementsByTagName('legend')[0].textContent = 'Оставьте контакты, мы проконсультируем вас бесплатно в удобное время';
+  popupWrapper.getElementsByClassName('form-feedback__button')[0].textContent = 'Oтправить';
+  body.appendChild(popup);
+  popup.appendChild(popupCloseBtn);
+  popup.append(popupWrapper);
+
+  popup.getElementsByClassName('form-feedback__input')[0].focus();
+
+  // body.classList.add('not-available');
+
+  const escClose = (evt) => {
+    if (evt.keyCode === ESC_KEYCODE) {
+      evt.preventDefault();
+      popup.remove();
+      document.removeEventListener('keydown', escClose);
+    }
+  };
+
+  const buttonClose = (evt) => {
+    evt.preventDefault();
+    popup.remove();
+    popupCloseBtn.removeEventListener('click', buttonClose);
+  };
+
+  const clickClose = (evt) => {
+    evt.preventDefault();
+    if (!popup) {
+      popup.remove();
+      document.removeEventListener('click', clickClose);
+    }
+  };
+
+  popupCloseBtn.addEventListener('click', buttonClose);
+  document.addEventListener('keydown', escClose);
+  document.addEventListener('click', clickClose);
+};
+
+popupOpen.addEventListener('click', showPopup);

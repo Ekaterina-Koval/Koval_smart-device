@@ -1,9 +1,10 @@
 .popup {
+  position: relative;
   display: block;
   width: 100%;
   max-width: 490px;
   height: 605px;
-  padding: 32px 40px;
+  padding: 28px 40px ;
   box-sizing: border-box;
   position: fixed;
   top: 0;
@@ -11,6 +12,71 @@
   bottom: 0;
   left: 0;
   margin: auto;
+  z-index: 10;
   color: $basic-white;
   background-color: $accent-main;
+
+  .feedback__wrapper {
+    padding: 0;
+    height: 100%;
+    overflow-y: auto;
+  }
+
+  .form-feedback li {
+    width: 100%;
+    margin-bottom: 30px;
+
+    &:not(:nth-child(2n+2)) {
+      margin-right: 0;
+    }
+  }
+
+  .form-feedback__button {
+    width: 100%;
+  }
+
+  .agreement {
+    width: 80%;
+    padding-left: 48px;
+  }
+}
+
+.popup__close-btn {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border: none;
+  background-image: url("../img/icon-popupclose.svg");
+  background-color: $accent-main;
+  right: 20px;
+  top: 20px;
+}
+
+.popup h2 {
+  margin: 0 0 10px;
+
+  @include second-font-400;
+  font-size: 28px;
+  line-height: 40px;
+}
+
+.popup legend {
+  width: 95%;
+  margin-bottom: 35px;
+}
+
+.popup input {
+  padding-left: 22px;
+}
+
+.popup textarea {
+  min-height: 104px;
+  box-sizing: border-box;
+  padding: 14px 22px;
+}
+
+.popup .form-feedback__button {
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 16px;
 }
