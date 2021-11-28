@@ -1,12 +1,11 @@
 .popup {
-  position: relative;
+  position: fixed;
   display: block;
   width: 100%;
   max-width: 490px;
   height: 605px;
-  padding: 28px 40px ;
+  padding: 28px 40px;
   box-sizing: border-box;
-  position: fixed;
   top: 0;
   right: 0;
   bottom: 0;
@@ -17,6 +16,7 @@
   background-color: $accent-main;
 
   .feedback__wrapper {
+    position: relative;
     padding: 0;
     height: 100%;
     overflow-y: auto;
@@ -33,6 +33,9 @@
 
   .form-feedback__button {
     width: 100%;
+    margin-bottom: 30px;
+    font-size: 14px;
+    line-height: 16px;
   }
 
   .agreement {
@@ -73,10 +76,4 @@
   min-height: 104px;
   box-sizing: border-box;
   padding: 14px 22px;
-}
-
-.popup .form-feedback__button {
-  margin-bottom: 30px;
-  font-size: 14px;
-  line-height: 16px;
 }

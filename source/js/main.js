@@ -8,11 +8,8 @@ const promo = body.querySelector('.promo');
 const form = body.querySelector('.form');
 const userName = document.querySelector('#user-name');
 const userPhone = document.querySelector('#user-phone');
-// const userText = document.querySelector('#user-text');
 const popupOpen = document.querySelector('.contacts__callback-button');
 const popupTemplate = body.querySelector('.feedback__wrapper');
-
-// const popupUserName = popup.querySelector('.popup__username');
 
 header.classList.remove('page-header--nojs');
 promo.classList.remove('promo--nojs'); // loading *.webp
@@ -47,17 +44,32 @@ if (form) {
   });
 }
 
-userPhone.addEventListener('input', () => {
-  const userPhoneValue = userPhone.value;
-  let regex = /\+7\(\d{3}\)\d{3}-\d{2}-\d{2}/;
-  if (!userPhoneValue) {
-    userPhone.setCustomValidity('Обязательное поле!');
-  } else if (!regex.test(userPhoneValue)) {
-    userPhone.setCustomValidity(`Введите корректный номер телефона!`);
+userPhone.addEventListener('focus', () => {
+  userPhone.value = '+7(';
+});
+
+userPhone.addEventListener('keypress', (evt) => {
+  if (evt.keyCode < 47 || evt.keyCode > 57 || evt.key === 'Backspace') {
+    evt.preventDefault();
+  } else if (evt.keyCode >= 47 || evt.keyCode <= 57 || evt.key !== 'Backspace') {
+    userPhone.setCustomValidity(`Введите 10 цифр номера телефона!`);
   } else {
     userPhone.setCustomValidity('');
   }
   userPhone.reportValidity();
+});
+
+userPhone.addEventListener('keydown', () => {
+  let old = 0;
+  const userPhoneLength = userPhone.value.length;
+  if (userPhoneLength < old) {
+    old--;
+    return;
+  }
+  if (userPhoneLength === 6) {
+    userPhone.value = userPhone.value + ')';
+  }
+  old++;
 });
 
 const showPopup = () => {
@@ -75,8 +87,6 @@ const showPopup = () => {
   popup.append(popupWrapper);
 
   popup.getElementsByClassName('form-feedback__input')[0].focus();
-
-  // body.classList.add('not-available');
 
   const escClose = (evt) => {
     if (evt.keyCode === ESC_KEYCODE) {

@@ -26,6 +26,13 @@
       background-color: $footer-dec-opacity-02;
     }
   }
+
+  @media (max-width: $small-width) {
+    &::after,
+    &::before {
+      left: -15px;
+    }
+  }
 }
 
 .nav ul {
@@ -36,7 +43,12 @@
   color: $basic-dark-opacity-05;
 
   @media (max-width: $medium-width) {
-  column-count: 1;
+    column-count: 1;
+  }
+
+  @media (max-width: $small-width) {
+    width: 95%;
+    padding-top: 4px;
   }
 }
 

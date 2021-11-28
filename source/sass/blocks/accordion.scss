@@ -1,13 +1,26 @@
+.accordion {
+  position: relative;
+}
+
 .accordion__toggle {
   display: none;
 
   @media (max-width: $small-width) {
+    position: absolute;
+    top: 30px;
+    right: 2px;
     display: block;
     width: 16px;
     height: 16px;
 
     &--open {
       background-image: url("../img/icon-accordion_open.svg");
+      background-size: auto;
+      background-repeat: no-repeat;
+    }
+
+    &--close {
+      background-image: url("../img/icon-accordion_close.svg");
       background-size: auto;
       background-repeat: no-repeat;
     }

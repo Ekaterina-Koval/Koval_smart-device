@@ -1,5 +1,10 @@
 .office ul {
   @include reset-list;
+
+  @media (max-width: $small-width) {
+    width: 95%;
+    padding-top: 4px;
+  }
 }
 
 .office a {
