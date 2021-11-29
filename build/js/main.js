@@ -11,8 +11,6 @@ const userPhone = document.querySelector('#user-phone');
 const popupOpen = document.querySelector('.contacts__callback-button');
 const popupTemplate = body.querySelector('.feedback__wrapper');
 
-header.classList.remove('page-header--nojs');
-promo.classList.remove('promo--nojs'); // loading *.webp
 
 let isStorageSupport = true;
 let storageName = '';

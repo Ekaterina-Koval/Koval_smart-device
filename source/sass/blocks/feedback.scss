@@ -4,9 +4,28 @@
   background-color: $accent-main;
 
   @media (min-width: $large-width-only) {
-    background-image:
-      url("../img/feedback-img-bg.png"),
-      url("../img/feedback-bg.svg");
+    background-image: url("../img/feedback-img-bg.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/feedback-img-bg@2x.png");
+    }
+
+    .no-webp & {
+      background-image: url("../img/feedback-img-bg.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/feedback-img-bg@2x.png");
+      }
+    }
+
+    .webp & {
+      background-image: url("../img/feedback-img-bg.webp");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/feedback-img-bg@2x.webp");
+      }
+    }
+    background-image: url("../img/feedback-bg.svg");
     background-size: auto, 2065px 764px;
     background-position: right 1056px top 160px, left 50% top -60px;
     background-repeat: no-repeat;

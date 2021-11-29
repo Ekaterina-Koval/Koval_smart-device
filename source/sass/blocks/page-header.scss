@@ -1,13 +1,10 @@
 .page-header {
   min-height: 875px;
   background-color: $basic-dark;
+  background-image: url("../img/header-bg_large.png");
 
-  &--nojs {
-    background-image: url("../img/header-bg_large.png");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/header-bg_large@2x.png");
-    }
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/header-bg_large@2x.png");
   }
 
   .no-webp & {
@@ -31,13 +28,10 @@
 
   @media (max-width: $medium-width) {
     min-height: 680px;
+    background-image: url("../img/header-bg_medium.png");
 
-    &--nojs {
-      background-image: url("../img/header-bg_medium.png");
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/header-bg_medium@2x.png");
-      }
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/header-bg_medium@2x.png");
     }
 
     .no-webp & {
@@ -59,13 +53,10 @@
 
   @media (max-width: $small-width) {
     min-height: 648px;
+    background-image: url("../img/header-bg_small.png");
 
-    &--nojs {
-      background-image: url("../img/header-bg_small.png");
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/header-bg_small@2x.png");
-      }
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/header-bg_small@2x.png");
     }
 
     .no-webp & {

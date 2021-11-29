@@ -1,8 +1,8 @@
-.agreement__checkbox {
+.agreement input {
   display: none;
 }
 
-.agreement__label {
+.agreement label {
   position: relative;
   box-sizing: border-box;
   font-size: 14px;
@@ -10,7 +10,7 @@
   color: $basic-white-opacity08;
 }
 
-.agreement__checkbox + label {
+.agreement input + label {
   &::before {
     content: "";
     display: block;

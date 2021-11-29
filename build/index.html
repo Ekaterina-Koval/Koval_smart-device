@@ -7,6 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Производство и монтаж печатных плат, поставка комплектующих, блоков и модулей">
   <title>Печатные платы</title>
+  <script src="js/main.js"></script>
+  <script src="js/vendor.js"></script>
   <link rel="preload" href="fonts/pt-mono-400.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/roboto-condensed-400.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/roboto-condensed-700.woff2" type="font/woff2" as="font" crossorigin="anonymous">
@@ -15,7 +17,7 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header page-header--nojs webp no-webp">
+  <header class="page-header webp no-webp">
     <h1 class="visually-hidden">Производство печатных плат</h1>
     <section class="page-header__header header container">
       <h2 class="visually-hidden">
@@ -48,14 +50,14 @@
             </a>
           </li>
         </ul>
-        <div class="contacts__callback-button button button--white">
+        <button type="button" class="contacts__callback-button button button--white">
           <a href="#">
             Заказать звонок
           </a>
-        </div>
+        </button>
       </div>
     </section>
-    <section class="page-header__promo promo promo--nojs container">
+    <section class="page-header__promo promo container">
       <div class="promo__content">
         <h2>
           Печатные платы
@@ -63,85 +65,91 @@
         <p>
           производство и монтаж, поставка комплектующих, блоков и модулей
         </p>
-        <div class="promo__button button button--accent">
+        <button type="button" class="promo__button button button--accent">
           <a href="index.html#form">
             <span class="promo__button-link promo__button-link--full">Получить бесплатную консультацию</span>
             <span class="promo__button-link promo__button-link--shot">Бесплатная консультация</span>
           </a>
-        </div>
+        </button>
       </div>
     </section>
   </header>
   <main class="page-main">
     <div class="page-main__bg">
-    <section class="features container">
-      <h2 class="visually-hidden">Наши преимущества</h2>
-      <div class="features__wrapper">
-        <ul>
-          <li>
-            <svg class="" width="29" height="35" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/sprite_auto.svg#icon-features-terms"></use>
-            </svg>
-            <h3>
-              Оперативные сроки
-            </h3>
-            <p>
-              Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять заказы плат и комплектующих в самые короткие сроки
-            </p>
-          </li>
-          <li>
-            <svg class="" width="35" height="35" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/sprite_auto.svg#icon-features-partners"></use>
-            </svg>
-            <h3>
-              Крупные поставщики
-            </h3>
-            <p>
-              Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC, REFOND.Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.
-            </p>
-          </li>
-          <li>
-            <svg class="" width="36" height="31" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/sprite_auto.svg#icon-features-confidentiality"></use>
-            </svg>
-            <h3>
-              Полная конфиденциальность
-            </h3>
-            <p>
-              По желанию клиента мы обеспечиваем полную конфеденциальность.
-            </p>
-          </li>
-          <li>
-            <svg class="" width="35" height="35" xmlns="http://www.w3.org/2000/svg">
-              <use xlink:href="img/sprite_auto.svg#icon-features-price"></use>
-            </svg>
-            <h3>
-              Персонализация стоимости
-            </h3>
-            <p>
-              Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас
-              устраивает.
-            </p>
-          </li>
-        </ul>
-      </div>
-    </section>
-    <section class="about-us container">
-      <div class="about-us__wrapper">
-        <h2>О компании</h2>
-        <p>
-          Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней.
-        </p>
-        <p>
-          Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
-        </p>
-        <div class="about-us__button button button--color">
-          <a href="#">
-            Подробнее
-          </a>
+      <section class="features container">
+        <h2 class="visually-hidden">Наши преимущества</h2>
+        <div class="features__wrapper">
+          <ul>
+            <li>
+              <svg class="" width="29" height="35" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite_auto.svg#icon-features-terms"></use>
+              </svg>
+              <h3>
+                Оперативные сроки
+              </h3>
+              <p>
+                Усовершенствованная логистическая система позволяет нам просчитывать стоимость, производить и доставлять
+                заказы плат и комплектующих в самые короткие сроки
+              </p>
+            </li>
+            <li>
+              <svg class="" width="35" height="35" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite_auto.svg#icon-features-partners"></use>
+              </svg>
+              <h3>
+                Крупные поставщики
+              </h3>
+              <p>
+                Нашими поставщиками являются такие крупные мировые компании как: OSRAM, CREE, HOLGLITRONIC,
+                REFOND.Сотрудничество с такими компаниями обеспичивает хорошее качество нашей продукции.
+              </p>
+            </li>
+            <li>
+              <svg class="" width="36" height="31" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite_auto.svg#icon-features-confidentiality"></use>
+              </svg>
+              <h3>
+                Полная конфиденциальность
+              </h3>
+              <p>
+                По желанию клиента мы обеспечиваем полную конфеденциальность.
+              </p>
+            </li>
+            <li>
+              <svg class="" width="35" height="35" xmlns="http://www.w3.org/2000/svg">
+                <use xlink:href="img/sprite_auto.svg#icon-features-price"></use>
+              </svg>
+              <h3>
+                Персонализация стоимости
+              </h3>
+              <p>
+                Мы подбираем определенную фабрику, поставщиков, вид доставки, чтобы установить ту цену, которая Вас
+                устраивает.
+              </p>
+            </li>
+          </ul>
         </div>
-      </div>
-    </section>
+      </section>
+      <section class="about-us container">
+        <div class="about-us__wrapper">
+          <h2>О компании</h2>
+          <p>
+            Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997
+            года. Выполняем срочные заказы и пилотные образцы до 10 дней.
+          </p>
+          <p>
+            Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные
+            платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД),
+            РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители
+            светотехники России.
+          </p>
+          <button type="button" class="about-us__button button button--color">
+            <a href="#">
+              Подробнее
+            </a>
+          </button>
+        </div>
+      </section>
     </div>
     <section class="service container">
       <div class="service__wrapper">
@@ -154,6 +162,17 @@
               <h3>
                 Производство печатных плат
               </h3>
+              <picture>
+                <source type="image/webp" srcset="img/service-img1_small.webp 1x, img/service-img1_small@2x.webp 2x" media="(max-width: 767px)">
+                <source type="image/webp" srcset="img/service-img1_medium.webp 1x, img/service-img1_medium@2x.webp 2x" media="(max-width: 1023px)">
+                <source type="image/webp" srcset="img/service-img1_large.webp 1x, img/service-img1_large@2x.webp 2x">
+                <!--img size (max-width 767px): 1x(width: 290px, hight: 256px), 2x(width: 580px, hight: 512px-->
+                <source media="(max-width: 767px)" srcset="img/service-img1_small.png 1x, img/service-img1_small@2x.png 2x">
+                <!--img size (max-width 1023px): 1x(width: 715px, hight: 256px), 2x(width: 1430px, hight: 512px-->
+                <source media="(max-width: 1023px)" srcset="img/service-img1_medium.png 1x, img/service-img1_medium@2x.png 2x">
+                <!--img size (min-width 1024px): 1x(width: 370px, hight: 620px 2x(width: 740px, hight: 1240px-->
+                <img src="img/service-img1_large.png" srcset="img/service-img1_large@2x.png 2x" width="370" height="620" alt="Черно-белое фото прцесса производства печатных плат">
+              </picture>
             </a>
           </li>
           <li>
@@ -161,6 +180,17 @@
               <h3>
                 Монтаж печатных плат
               </h3>
+              <picture>
+                <source type="image/webp" srcset="img/service-img2_small.webp 1x, img/service-img2_small@2x.webp 2x" media="(max-width: 767px)">
+                <source type="image/webp" srcset="img/service-img2_medium.webp 1x, img/service-img2_medium@2x.webp 2x" media="(max-width: 1023px)">
+                <source type="image/webp" srcset="img/service-img2_large.webp 1x, img/service-img2_large@2x.webp 2x">
+                <!--img size (max-width 767px): 1x(width: 290px, hight: 256px), 2x(width: 580px, hight: 512px-->
+                <source media="(max-width: 767px)" srcset="img/service-img2_small.png 1x, img/service-img2_small@2x.png 2x">
+                <!--img size (max-width 1023px): 1x(width: 715px, hight: 256px), 2x(width: 1430px, hight: 512px-->
+                <source media="(max-width: 1023px)" srcset="img/service-img2_medium.png 1x, img/service-img2_medium@2x.png 2x">
+                <!--img size (min-width 1024px): 1x(width: 370px, hight: 620px 2x(width: 740px, hight: 1240px-->
+                <img src="img/service-img2_large.png" srcset="img/service-img2_large@2x.png 2x" width="370" height="620" alt="Черно-белое фото прцесса монтажа печатной платы">
+              </picture>
             </a>
           </li>
           <li>
@@ -168,6 +198,17 @@
               <h3>
                 Комплектующие для светотехники
               </h3>
+              <picture>
+                <source type="image/webp" srcset="img/service-img3_small.webp 1x, img/service-img3_small@2x.webp 2x" media="(max-width: 767px)">
+                <source type="image/webp" srcset="img/service-img3_medium.webp 1x, img/service-img3_medium@2x.webp 2x" media="(max-width: 1023px)">
+                <source type="image/webp" srcset="img/service-img3_large.webp 1x, img/service-img3_large@2x.webp 2x">
+                <!--img size (max-width 767px): 1x(width: 290px, hight: 256px), 2x(width: 580px, hight: 512px-->
+                <source media="(max-width: 767px)" srcset="img/service-img3_small.png 1x, img/service-img3_small@2x.png 2x">
+                <!--img size (max-width 1023px): 1x(width: 715px, hight: 256px), 2x(width: 1430px, hight: 512px-->
+                <source media="(max-width: 1023px)" srcset="img/service-img3_medium.png 1x, img/service-img3_medium@2x.png 2x">
+                <!--img size (min-width 1024px): 1x(width: 370px, hight: 620px 2x(width: 740px, hight: 1240px-->
+                <img src="img/service-img3_large.png" srcset="img/service-img3_large@2x.png 2x" width="370" height="620" alt="Черно-белое фото светодиодной ленты">
+              </picture>
             </a>
           </li>
         </ul>
@@ -186,13 +227,13 @@
                 <label class="visually-hidden" for="user-name">
                   Имя
                 </label>
-                <input class="form-feedback__input" type="text" name="username" placeholder="Имя" id="user-name" required="">
+                <input type="text" name="username" placeholder="Имя" id="user-name" required="">
               </li>
               <li>
                 <label class="visually-hidden" for="user-phone">
                   Телефон
                 </label>
-                <input class="form-feedback__input" type="tel" name="phone" placeholder="Телефон" autocomplete="off" maxlength="14" id="user-phone" required="">
+                <input type="tel" name="phone" placeholder="Телефон" autocomplete="off" maxlength="14" id="user-phone" required="">
               </li>
               <li>
                 <label class="visually-hidden" for="user-text">
@@ -202,10 +243,10 @@
               </li>
             </ul>
           </fieldset>
-          <button class="form-feedback__button button button--white" type="submit">Задать вопроc</button>
+          <button type="submit" class="form-feedback__button button button--white">Задать вопроc</button>
           <div class="form-feedback__agreement agreement">
-            <input class="agreement__checkbox" type="checkbox" name="agreement" checked="" id="agreement" required="">
-            <label class="agreement__label" for="agreement">
+            <input type="checkbox" name="agreement" checked="" id="agreement" required="">
+            <label for="agreement">
               Я согласен на обработку персональных данных
             </label>
           </div>
@@ -266,7 +307,7 @@
     </div>
     <div class="footer__nav nav accordion panel-group accordion--nojs">
       <h2>Разделы сайта</h2>
-      <button class="nav__toggle accordion__toggle accordion__toggle--open">
+      <button type="button" class="nav__toggle accordion__toggle accordion__toggle--open">
         <span class="visually-hidden">Разделы сайта</span>
       </button>
       <nav class="nav__list accordion__item panel-body accordion__item--nojs">
@@ -297,7 +338,7 @@
     </div>
     <div class="footer__office office panel-group accordion">
       <h2>Наш офис</h2>
-      <button class="office__toggle accordion__toggle accordion__toggle--open">
+      <button type="button" class="office__toggle accordion__toggle accordion__toggle--open">
         <span class="visually-hidden">Наши контакты</span>
       </button>
       <ul class="office__contacts accordion__item panel-body accordion__item--nojs">
@@ -330,49 +371,7 @@
       </span>
     </div>
   </footer>
-<!--
-  <section class="popup visually-hidden">
-    <h2 class="feedback-title">Закажите звонок</h2>
-    <form class="form" method="post" action="https://echo.htmlacademy.ru/">
-      <fieldset>
-        <legend class="feedback-item">Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
-        </legend>
-        <ul>
-          <li>
-            <label class="visually-hidden" for="user-name">
-              Имя
-            </label>
-            <input class="popup__username" type="text" name="username" placeholder="Имя" id="user-name" required />
-          </li>
-          <li>
-            <label class="visually-hidden" for="user-phone">
-              Телефон
-            </label>
-            <input type="tel" name="phone" placeholder="Телефон" id="user-phone" required />
-          </li>
-          <li>
-            <label class="visually-hidden" for="question">
-              Вопрос
-            </label>
-            <textarea name="question" placeholder="Ваш вопрос" autocomplete="off" id="question"></textarea>
-          </li>
-        </ul>
-      </fieldset>
-      <input type="submit" value="Отправить">
-      <input class="form__agreement" type="checkbox" name="agreement" checked id="agreement" />
-      <label class="" for="agreement">
-        Я согласен на обработку персональных данных
-      </label>
-    </form>
-    <button class="popup__close" type="button">
-      <span class="visually-hidden">
-        Закрыть
-      </span>
-    </button>
-  </section>-->
 
-  <script src="js/main.js"></script>
-  <script src="js/vendor.js"></script>
 </body>
 
 </html>

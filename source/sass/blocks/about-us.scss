@@ -1,6 +1,26 @@
 .about-us {
   min-height: 412px;
   background-image: url("../img/about-img_large.png");
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/about-img_large@2x.png");
+  }
+
+  .no-webp & {
+    background-image: url("../img/about-img_large.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/about-img_large@2x.png");
+    }
+  }
+
+  .webp & {
+    background-image: url("../img/about-img_large.webp");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/about-img_large@2x.webp");
+    }
+  }
   background-position: 20.3% top;
   background-repeat: no-repeat;
 
