@@ -49,6 +49,10 @@
   }
 }
 
+.features svg {
+  fill: $accent-main;
+}
+
 .features p {
   margin: 0;
 }
@@ -70,27 +74,15 @@
   @media (max-width: $small-width) {
     padding-right: 12px;
     letter-spacing: normal;
-
-    &:nth-child(2) {
-      padding-right: 11px;
-    }
   }
 
-  & svg {
-    fill: $accent-main;
-  }
+  &:hover  {
+  background-color: $accent-main;
+  border-color: $accent-main;
 
-  &:hover {
-    background-color: $accent-main;
-    border-color: $accent-main;
-
-    & svg {
-      fill: $basic-white;
-    }
-
-    & h3,
-    p {
-      color: $basic-white;
+    & > * {
+    color: $basic-white;
+    fill: $basic-white;
     }
   }
 }

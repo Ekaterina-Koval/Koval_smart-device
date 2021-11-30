@@ -3,8 +3,6 @@
 const ESC_KEYCODE = 27;
 
 const body = document.querySelector('.page__body');
-const header = body.querySelector('.page-header');
-const promo = body.querySelector('.promo');
 const form = body.querySelector('.form');
 const userName = document.querySelector('#user-name');
 const userPhone = document.querySelector('#user-phone');
