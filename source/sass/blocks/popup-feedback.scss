@@ -1,9 +1,11 @@
-.popup {
+.popup-feedback {
   position: fixed;
   display: block;
   width: 100%;
   max-width: 490px;
-  height: 605px;
+  height: fit-content;
+  max-height: 95vh;
+  overflow-y: auto;
   padding: 28px 40px;
   box-sizing: border-box;
   top: 0;
@@ -14,37 +16,16 @@
   z-index: 10;
   color: $basic-white;
   background-color: $accent-main;
-
-  .feedback__wrapper {
-    position: relative;
-    padding: 0;
-    height: 100%;
-    overflow-y: auto;
-  }
-
-  .form-feedback li {
-    width: 100%;
-    margin-bottom: 30px;
-
-    &:not(:nth-child(2n+2)) {
-      margin-right: 0;
-    }
-  }
-
-  .form-feedback__button {
-    width: 100%;
-    margin-bottom: 30px;
-    font-size: 14px;
-    line-height: 16px;
-  }
-
-  .agreement {
-    width: 80%;
-    padding-left: 48px;
-  }
 }
 
-.popup__close-btn {
+.popup-feedback__wrapper {
+  position: relative;
+  padding: 0;
+  height: 100%;
+  overflow-y: auto;
+}
+
+.popup-feedback__close-button {
   position: absolute;
   width: 16px;
   height: 16px;
@@ -55,7 +36,7 @@
   top: 20px;
 }
 
-.popup h2 {
+.popup-feedback h2 {
   margin: 0 0 10px;
 
   @include second-font-400;
@@ -63,17 +44,35 @@
   line-height: 40px;
 }
 
-.popup legend {
+.popup-feedback legend {
   width: 95%;
+  background-color: $accent-main;
   margin-bottom: 35px;
 }
 
-.popup input {
+.popup-feedback li {
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.popup-feedback__agreement {
+  width: 80%;
+  padding-left: 48px;
+}
+
+.popup-feedback input {
   padding-left: 22px;
 }
 
-.popup textarea {
+.popup-feedback textarea {
   min-height: 104px;
   box-sizing: border-box;
   padding: 14px 22px;
+}
+
+.popup-feedback__button {
+  width: 100%;
+  margin-bottom: 30px;
+  font-size: 14px;
+  line-height: 16px;
 }

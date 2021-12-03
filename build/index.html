@@ -7,8 +7,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="description" content="Производство и монтаж печатных плат, поставка комплектующих, блоков и модулей">
   <title>Печатные платы</title>
-  <script src="js/main.js"></script>
-  <script src="js/vendor.js"></script>
   <link rel="preload" href="fonts/pt-mono-400.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/roboto-condensed-400.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   <link rel="preload" href="fonts/roboto-condensed-700.woff2" type="font/woff2" as="font" crossorigin="anonymous">
@@ -158,7 +156,7 @@
         </h2>
         <ul>
           <li>
-            <a class="service__link service__link--production service__link--nojs .webp .no-webp" href="#" aria-label="Подробнее о производстве печатных плат">
+            <a class="service__link service__link--production .webp .no-webp" href="#" aria-label="Подробнее о производстве печатных плат">
               <h3>
                 Производство печатных плат
               </h3>
@@ -176,7 +174,7 @@
             </a>
           </li>
           <li>
-            <a class="service__link service__link--installation service__link--nojs .webp .no-webp" href="#" aria-label="Подробнее о монтаже печатных плат">
+            <a class="service__link service__link--installation .webp .no-webp" href="#" aria-label="Подробнее о монтаже печатных плат">
               <h3>
                 Монтаж печатных плат
               </h3>
@@ -194,7 +192,7 @@
             </a>
           </li>
           <li>
-            <a class="service__link service__link--accessories service__link--nojs .webp .no-webp" href="#" aria-label="Подробнее о комплектующих для светотехники">
+            <a class="service__link service__link--accessories .webp .no-webp" href="#" aria-label="Подробнее о комплектующих для светотехники">
               <h3>
                 Комплектующие для светотехники
               </h3>
@@ -224,22 +222,13 @@
             </legend>
             <ul>
               <li>
-                <label class="visually-hidden" for="user-name">
-                  Имя
-                </label>
-                <input type="text" name="username" placeholder="Имя" id="user-name" required="">
+                <input type="text" name="username" placeholder="Имя" required="">
               </li>
               <li>
-                <label class="visually-hidden" for="user-phone">
-                  Телефон
-                </label>
-                <input type="tel" name="phone" placeholder="Телефон" autocomplete="off" maxlength="14" id="user-phone" required="">
+                <input type="tel" name="userphone" placeholder="Телефон" autocomplete="off" maxlength="14" required="">
               </li>
               <li>
-                <label class="visually-hidden" for="user-text">
-                  Вопрос
-                </label>
-                <textarea name="question" placeholder="Ваш вопрос" autocomplete="off" id="user-text"></textarea>
+                <textarea name="question" placeholder="Ваш вопрос" autocomplete="off"></textarea>
               </li>
             </ul>
           </fieldset>
@@ -371,6 +360,43 @@
       </span>
     </div>
   </footer>
+
+  <template id="feedback">
+    <article class="popup-feedback">
+      <button type="button" class="popup-feedback__close-button">
+        <span class="visually-hidden">Закрыть окно</span>
+      </button>
+      <h2>Закажите звонок</h2>
+      <form class="popup-feedback__form form-feedback" id="form">
+        <fieldset>
+          <legend>
+            Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
+          </legend>
+          <ul>
+            <li>
+              <input type="text" name="username" placeholder="Имя" required="">
+            </li>
+            <li>
+              <input type="tel" name="userphone" placeholder="Телефон" autocomplete="off" maxlength="14" required="">
+            </li>
+            <li>
+              <textarea name="question" placeholder="Ваш вопрос" autocomplete="off"></textarea>
+            </li>
+          </ul>
+        </fieldset>
+        <button type="submit" class="popup-feedback__button button button--white">Задать вопроc</button>
+        <div class="popup-feedback__agreement">
+          <input type="checkbox" name="agreement" checked="" id="agreement" required="">
+          <label for="agreement">
+            Я согласен на обработку персональных данных
+          </label>
+        </div>
+      </form>
+    
+  </article></template>
+
+<script src="js/main.js"></script>
+<script src="js/vendor.js"></script>
 
 </body>
 

@@ -32,11 +32,16 @@
 
   @media (max-width: $small-width) {
     background-image: none;
+
+    .webp &,
+    .no-webp & {
+      background-image: none;
+    }
   }
 }
 
 .about-us__wrapper {
-  padding: 0 9% 0 21.5%;
+  padding: 0 9% 0 304px;
 
   @media (max-width: $medium-width) {
     padding: 0 0 0 26%;

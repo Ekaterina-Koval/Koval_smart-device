@@ -76,13 +76,13 @@
     letter-spacing: normal;
   }
 
-  &:hover  {
-  background-color: $accent-main;
-  border-color: $accent-main;
+  &:hover {
+    background-color: $accent-main;
+    border-color: $accent-main;
 
     & > * {
-    color: $basic-white;
-    fill: $basic-white;
+      color: $basic-white;
+      fill: $basic-white;
     }
   }
 }

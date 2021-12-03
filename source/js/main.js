@@ -1,14 +1,10 @@
 'use strict';
 
-const ESC_KEYCODE = 27;
-
 const body = document.querySelector('.page__body');
 const form = body.querySelector('.form');
-const userName = document.querySelector('#user-name');
-const userPhone = document.querySelector('#user-phone');
+const userName = document.querySelector('input[name=username]');
+const userPhone = document.querySelector('input[name=userphone]');
 const popupOpen = document.querySelector('.contacts__callback-button');
-const popupTemplate = body.querySelector('.feedback__wrapper');
-
 
 let isStorageSupport = true;
 let storageName = '';
@@ -40,75 +36,82 @@ if (form) {
   });
 }
 
+popupOpen.addEventListener('click', () => {
+  const popupTemplate = body.querySelector('#feedback').content.querySelector('.popup-feedback');
+  const popup = popupTemplate.cloneNode(true);
+  document.body.append(popup);
+  const overlay = document.createElement('div');
+  body.appendChild(overlay);
+  overlay.classList.add('overlay');
+  const popupCloseButton = body.querySelector('.popup-feedback__close-button');
+
+  if (body.getElementsByClassName('popup-feedback').length > 0) {
+
+    body.classList.add('not-available');
+
+    const escClose = (evt) => {
+      const escKeycode = 27;
+      if (evt.keyCode === escKeycode) {
+        evt.preventDefault();
+        popup.remove();
+        body.classList.remove('not-available');
+        overlay.classList.remove('overlay');
+        document.removeEventListener('keydown', escClose);
+      }
+    };
+
+    const buttonClose = (evt) => {
+      if (evt.target.className !== 'popup-feedback') {
+
+        evt.preventDefault();
+        popup.remove();
+        body.classList.remove('not-available');
+        overlay.classList.remove('overlay');
+        popupCloseButton.removeEventListener('click', buttonClose);
+      }
+    };
+
+    const clickClose = (evt) => {
+      if (evt.target.className !== 'popup-feedback') {
+        popup.remove();
+        body.classList.remove('not-available');
+        overlay.classList.remove('overlay');
+        document.removeEventListener('click', clickClose);
+      }
+    };
+
+    popupCloseButton.addEventListener('click', buttonClose);
+    document.addEventListener('keydown', escClose);
+    overlay.addEventListener('click', clickClose);
+  }
+});
+
 userPhone.addEventListener('focus', () => {
-  userPhone.value = '+7(';
-});
-
-userPhone.addEventListener('keypress', (evt) => {
-  if (evt.keyCode < 47 || evt.keyCode > 57 || evt.key === 'Backspace') {
-    evt.preventDefault();
-  } else if (evt.keyCode >= 47 || evt.keyCode <= 57 || evt.key !== 'Backspace') {
-    userPhone.setCustomValidity(`Введите 10 цифр номера телефона!`);
-  } else {
-    userPhone.setCustomValidity('');
+  if (userPhone.value.length === 0) {
+    userPhone.value = '+7(';
+    userPhone.selectionStart = userPhone.value.length;
   }
-  userPhone.reportValidity();
-});
-
-userPhone.addEventListener('keydown', () => {
-  let old = 0;
-  const userPhoneLength = userPhone.value.length;
-  if (userPhoneLength < old) {
-    old--;
-    return;
-  }
-  if (userPhoneLength === 6) {
-    userPhone.value = userPhone.value + ')';
-  }
-  old++;
-});
-
-const showPopup = () => {
-  const popup = document.createElement('section');
-  const popupCloseBtn = document.createElement('button');
-  const popupWrapper = popupTemplate.cloneNode(true);
-  popup.className = 'popup';
-  popupCloseBtn.className = 'popup__close-btn';
-
-  popupWrapper.getElementsByTagName('h2')[0].textContent = 'Закажите звонок';
-  popupWrapper.getElementsByTagName('legend')[0].textContent = 'Оставьте контакты, мы проконсультируем вас бесплатно в удобное время';
-  popupWrapper.getElementsByClassName('form-feedback__button')[0].textContent = 'Oтправить';
-  body.appendChild(popup);
-  popup.appendChild(popupCloseBtn);
-  popup.append(popupWrapper);
-
-  popup.getElementsByClassName('form-feedback__input')[0].focus();
-
-  const escClose = (evt) => {
-    if (evt.keyCode === ESC_KEYCODE) {
+  userPhone.addEventListener('keypress', (evt) => {
+    if (evt.keyCode < 47 || evt.keyCode > 57 || evt.key === 'Backspace') {
       evt.preventDefault();
-      popup.remove();
-      document.removeEventListener('keydown', escClose);
+      userPhone.setCustomValidity(`Телефон в формате +7(***)*******. Поле принимает к вводу только цифры!`);
     }
-  };
-
-  const buttonClose = (evt) => {
-    evt.preventDefault();
-    popup.remove();
-    popupCloseBtn.removeEventListener('click', buttonClose);
-  };
-
-  const clickClose = (evt) => {
-    evt.preventDefault();
-    if (!popup) {
-      popup.remove();
-      document.removeEventListener('click', clickClose);
+    if (evt.keyCode >= 47 || evt.keyCode <= 57 || evt.key !== 'Backspace') {
+      userPhone.addEventListener('keydown', () => {
+        let old = 0;
+        const userPhoneLength = userPhone.value.length;
+        if (userPhoneLength < old) {
+          old--;
+          return;
+        }
+        if (userPhoneLength === 6) {
+          userPhone.value = userPhone.value + ')';
+        }
+        old++;
+      });
+    } else {
+      userPhone.setCustomValidity('');
     }
-  };
-
-  popupCloseBtn.addEventListener('click', buttonClose);
-  document.addEventListener('keydown', escClose);
-  document.addEventListener('click', clickClose);
-};
-
-popupOpen.addEventListener('click', showPopup);
+    userPhone.reportValidity();
+  });
+});
