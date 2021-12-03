@@ -52,11 +52,11 @@
             </a>
           </li>
         </ul>
-        <button type="button" class="contacts__callback-button button button--white">
+        <div class="contacts__callback-button button button--white">
           <a href="#">
             Заказать звонок
           </a>
-        </button>
+        </div>
       </div>
     </section>
     <section class="page-header__promo promo container">
@@ -67,12 +67,12 @@
         <p>
           производство и монтаж, поставка комплектующих, блоков и модулей
         </p>
-        <button type="button" class="promo__button button button--accent">
+        <div class="promo__button button button--accent">
           <a href="index.html#form">
             <span class="promo__button-link promo__button-link--full">Получить бесплатную консультацию</span>
             <span class="promo__button-link promo__button-link--shot">Бесплатная консультация</span>
           </a>
-        </button>
+        </div>
       </div>
     </section>
   </header>
@@ -145,11 +145,11 @@
             РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители
             светотехники России.
           </p>
-          <button type="button" class="about-us__button button button--color">
+          <div class="about-us__button button button--color">
             <a href=#>
               Подробнее
             </a>
-          </button>
+          </div>
         </div>
       </section>
     </div>
@@ -388,7 +388,7 @@
         <span class="visually-hidden">Закрыть окно</span>
       </button>
       <h2>Закажите звонок</h2>
-      <form class="popup-feedback__form form-feedback" id="form">
+      <form class="popup-feedback__form form-feedback">
         <fieldset>
           <legend>
             Оставьте контакты, мы проконсультируем вас бесплатно в удобное время
@@ -407,13 +407,13 @@
         </fieldset>
         <button type="submit" class="popup-feedback__button button button--white">Задать вопроc</button>
         <div class="popup-feedback__agreement">
-          <input type="checkbox" name="agreement" checked id="agreement" required />
-          <label for="agreement">
+          <input type="checkbox" name="agreement" checked id="popup-agreement" required />
+          <label for="popup-agreement">
             Я согласен на обработку персональных данных
           </label>
         </div>
       </form>
-    </div>
+    </article>
   </template>
 
 <script src="js/main.js"></script>
