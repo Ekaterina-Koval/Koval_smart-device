@@ -1,5 +1,5 @@
 .about-us {
-  min-height: 412px;
+  min-height: 416px;
   background-image: url("../img/about-img_large.png");
 
   @media (min-resolution: 2dppx) {
@@ -52,7 +52,7 @@
   }
 }
 
-.about-us p {
+.about-us__text {
   height: min-content;
   margin: 0 0 20px;
 
@@ -60,20 +60,27 @@
     margin-bottom: 40px;
   }
 
-  @media (max-width: $medium-width) {
-    position: relative;
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-line-clamp: 4;
-    -webkit-box-orient: vertical;
-  }
-
   @media (max-width: $small-width) {
-    -webkit-line-clamp: 8;
-    margin-bottom: 40px;
+    margin-bottom: 38px;
 
     &:last-of-type {
       margin-bottom: 30px;
+    }
+  }
+}
+
+.about-us__text-element {
+  &--medium-width {
+    display: none;
+
+    @media (max-width: $medium-width) {
+      display: inline;
+    }
+  }
+
+  &--large-width-only {
+    @media (max-width: $medium-width) {
+      display: none;
     }
   }
 }
@@ -82,10 +89,12 @@
   margin: 0 0 20px;
 
   @include second-font-400;
-  font-size: 32px;
-  line-height: 45px;
+  font-size: 36px;
+  line-height: 51px;
 
   @media (max-width: $medium-width) {
+    font-size: 32px;
+    line-height: 45px;
     margin-bottom: 26px;
   }
 
@@ -93,5 +102,12 @@
     margin-bottom: 20px;
     font-size: 28px;
     line-height: 40px;
+  }
+}
+
+.about-us__button {
+  @media (max-width: $small-width) {
+    font-size: 14px;
+    line-height: 16px;
   }
 }
