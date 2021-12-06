@@ -12,6 +12,8 @@
     display: block;
     width: 16px;
     height: 16px;
+    background-color: inherit;
+    border: none;
 
     &--open {
       background-image: url("../img/icon-accordion_open.svg");

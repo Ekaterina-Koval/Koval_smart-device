@@ -7,7 +7,7 @@ var accordionToggle = document.querySelectorAll('.accordion__toggle'),
 accordionToggle.__proto__.forEach = [].__proto__.forEach;
 
 var activePanel;
-accordionToggle.forEach(function (item, i, accordionToggle) {
+accordionToggle.forEach(function (item, i) {
   item.addEventListener('click', function (e) {
     //show new thingy;
     this.classList.add('panel-active');
