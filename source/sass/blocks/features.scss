@@ -73,16 +73,14 @@
   }
 
   @media (max-width: $small-width) {
-    min-height: 232px;
+    min-height: 230px;
     padding: 22px 20px 27px 22px;
+    padding-right: 12px;
+    letter-spacing: normal;
 
     &:first-child {
       padding: 25px 20px 25px 25px;
     }
-
-    min-height: 230px;
-    padding-right: 12px;
-    letter-spacing: normal;
   }
 
   &:hover {
